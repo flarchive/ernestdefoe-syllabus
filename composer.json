@@ -1,0 +1,95 @@
+{
+    "name": "ernestdefoe/syllabus",
+    "description": "Syllabus — courses inside your Flarum forum. Text, video, assignment and quiz lessons, drag-and-drop outlines, enrolment and progress, a discussion for every lesson, an instructor panel, certificates with a verification link, and paid courses through member groups.",
+    "keywords": [
+        "flarum",
+        "flarum-extension",
+        "courses",
+        "lms",
+        "learning",
+        "lessons",
+        "education",
+        "certificates"
+    ],
+    "type": "flarum-extension",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ernest Defoe",
+            "email": "ernestdefoe@gmail.com"
+        }
+    ],
+    "homepage": "https://github.com/ernestdefoe/syllabus",
+    "support": {
+        "issues": "https://github.com/ernestdefoe/syllabus/issues",
+        "source": "https://github.com/ernestdefoe/syllabus"
+    },
+    "funding": [
+        {
+            "type": "other",
+            "url": "https://buymeacoffee.com/ernestdefoe"
+        }
+    ],
+    "require": {
+        "php": "^8.3",
+        "flarum/core": "^2.0"
+    },
+    "suggest": {
+        "ernestdefoe/brainstorm": "Quiz lessons: embed a Brainstorm quiz in a course and make passing it unlock the next lesson.",
+        "fof/badges": "Award a badge when a member completes a course.",
+        "flarum/tags": "Put each lesson's discussion in a tag of your choice."
+    },
+    "autoload": {
+        "psr-4": {
+            "Ernestdefoe\\Syllabus\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Ernestdefoe\\Syllabus\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "Syllabus",
+            "category": "feature",
+            "icon": {
+                "name": "fas fa-chalkboard-user",
+                "backgroundColor": "#0f766e",
+                "color": "#fff"
+            },
+            "optional-dependencies": [
+                "ernestdefoe/brainstorm",
+                "fof/badges",
+                "flarum/tags"
+            ]
+        }
+    },
+    "require-dev": {
+        "ernestdefoe/brainstorm": "^1.0",
+        "flarum/mentions": "^2.0",
+        "flarum/phpstan": "^2.0",
+        "flarum/tags": "^2.0",
+        "flarum/testing": "^2.0",
+        "fof/badges": "^2.0"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "scripts": {
+        "test": [
+            "@test:integration"
+        ],
+        "test:integration": "phpunit -c tests/phpunit.integration.xml",
+        "test:setup": "@php tests/integration/setup.php",
+        "analyse:phpstan": "phpstan analyse"
+    },
+    "scripts-descriptions": {
+        "test": "Runs all tests.",
+        "test:integration": "Runs all integration tests.",
+        "test:setup": "Sets up a database for use with integration tests. Execute this only once.",
+        "analyse:phpstan": "Run static analysis"
+    },
+    "minimum-stability": "beta",
+    "prefer-stable": true
+}
