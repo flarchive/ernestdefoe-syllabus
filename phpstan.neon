@@ -1,0 +1,21 @@
+includes:
+    - vendor/flarum/phpstan/extension.neon
+
+parameters:
+    # One process: flarum/phpstan's bootstrap installs a test forum the first
+    # time it runs, and parallel workers each start that install at once on a
+    # fresh checkout (CI), failing with Install\StepFailed.
+    parallel:
+        maximumNumberOfProcesses: 1
+    level: 6
+    paths:
+        - extend.php
+        - src
+    # Kiosk is optional and not a dev dependency yet (unreleased): the classes
+    # that only load when it is enabled are left out until it is on Packagist.
+    excludePaths:
+        - src/Kiosk
+    ignoreErrors:
+        - '#Ernestdefoe\\Kiosk\\#'
+    databaseMigrationsPath:
+        - migrations
