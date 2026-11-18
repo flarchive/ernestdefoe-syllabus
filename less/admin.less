@@ -1,0 +1,57 @@
+.SyllabusCategories {
+  &-list {
+    margin: 10px 0;
+    padding: 0;
+    list-style: none;
+    width: 100%;
+    max-width: 560px;
+  }
+  &-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+
+    .FormControl {
+      flex: 1;
+      min-width: 0;
+      max-width: none;
+    }
+    &.is-dragging {
+      opacity: 0.85;
+    }
+  }
+  &-handle {
+    cursor: grab;
+    padding: 4px 6px;
+    color: var(--muted-color);
+    touch-action: none;
+
+    &:focus-visible {
+      outline: 2px solid var(--primary-color);
+      border-radius: 3px;
+    }
+  }
+  // The form group shrink-wraps its children, so the row claims the full width itself; the
+  // field grows from a basis wide enough for long placeholders ("Name der neuen Kategorie")
+  // and the button wraps under it on a phone instead of squeezing it.
+  &-add {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    width: 100%;
+    max-width: 560px;
+
+    .FormControl {
+      flex: 1 1 260px;
+      min-width: 0;
+      max-width: none;
+    }
+  }
+}
+
+@import "designer.less";
+
+.SyllabusCertificateSetting > .Button {
+  margin-top: 10px;
+}
