@@ -1,0 +1,136 @@
+// The certificate designer, in the course editor and the admin page.
+
+.SyllabusDesigner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+  gap: 20px;
+  align-items: start;
+
+  @media (max-width: 900px) {
+    grid-template-columns: minmax(0, 1fr);
+
+    // The preview first, so a change can be seen where it is made.
+    .SyllabusDesigner-preview {
+      order: -1;
+    }
+  }
+
+  &-controls {
+    min-width: 0;
+  }
+  &-templates {
+    display: grid;
+    // Flarum's .Form-group is a flex box: without this the grid shrinks to one column.
+    width: 100%;
+    grid-template-columns: repeat(auto-fill, minmax(~"min(92px, 100%)", 1fr));
+    gap: 8px;
+  }
+  &-template {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    min-width: 0;
+    padding: 8px;
+    border: 2px solid var(--control-bg);
+    border-radius: var(--border-radius, 6px);
+    color: var(--text-color);
+    font-weight: normal;
+    text-align: center;
+    overflow-wrap: anywhere;
+    cursor: pointer;
+
+    input {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+    }
+    &.is-chosen {
+      border-color: var(--primary-color);
+    }
+    &:focus-within {
+      outline: 2px solid var(--primary-color);
+      outline-offset: 2px;
+    }
+  }
+  // Tiny drawings of each template, in the templates' own colors.
+  &-swatch {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1.414;
+    border-radius: 3px;
+    background: #fff;
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.12);
+
+    &--default {
+      background: repeating-linear-gradient(45deg, var(--control-bg), var(--control-bg) 6px, var(--body-bg) 6px, var(--body-bg) 12px);
+    }
+    &--classic {
+      background: #fbf8f1;
+      box-shadow: inset 0 0 0 3px #fbf8f1, inset 0 0 0 5px #b08d3c, inset 0 0 0 7px #fbf8f1, inset 0 0 0 8px #b08d3c;
+    }
+    &--modern {
+      background: linear-gradient(90deg, #0f766e 0 20%, #14b8a6 20% 21%, #fff 21%);
+    }
+    &--minimal {
+      box-shadow: inset 0 0 0 4px #fff, inset 0 0 0 5px #1a1a1a;
+    }
+    &--academic {
+      background: radial-gradient(circle at 86% 38%, #1f3a68 0 9%, transparent 10%), linear-gradient(90deg, #fff 0 73%, #f2f4f7 73%);
+      box-shadow: inset 0 3px 0 #1f3a68, inset 0 0 0 1px rgba(0, 0, 0, 0.12);
+    }
+  }
+  &-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(~"min(200px, 100%)", 1fr));
+    gap: 0 12px;
+    margin-top: 12px;
+  }
+  &-image {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+  &-imageText {
+    display: flex;
+    overflow-wrap: anywhere;
+    flex-direction: column;
+    flex: 1 1 160px;
+    min-width: 0;
+
+    strong {
+      color: var(--text-color);
+    }
+  }
+  &-preview {
+    margin: 0;
+    min-width: 0;
+  }
+  &-frame {
+    position: relative;
+    line-height: 0;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.2);
+
+    svg,
+    .SyllabusDesigner-blank {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 2400 / 1697;
+      background: #f4f1ea;
+    }
+    .LoadingIndicator-container {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      line-height: normal;
+    }
+  }
+  figcaption {
+    margin-top: 6px;
+  }
+}
