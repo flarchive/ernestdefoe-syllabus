@@ -2,21 +2,13 @@
 
 > **Read-only archive of released versions of ernestdefoe/syllabus.** Not for installation: use [Packagist](https://packagist.org/packages/ernestdefoe/syllabus) or the [upstream repository](https://github.com/ernestdefoe/syllabus).
 
-**9** versions archived · Latest: [`1.4.0`](https://github.com/flarchive/ernestdefoe-syllabus/tree/archive/v1.4.0) · License: `MIT` · Flarum: `^2.0`
+**0** versions archived · Latest: [`1.5.0`](https://github.com/flarchive/ernestdefoe-syllabus/tree/archive/v1.5.0) · License: `MIT` · Flarum: `^2.0`
 
 ## Archived Versions
 
 | Version | Released | Flarum | Source |
 |---|---|---|---|
-| `1.0.0` | 2026-10-29 | `^2.0` | [Browse](https://github.com/flarchive/ernestdefoe-syllabus/tree/archive/v1.0.0) |
-| `1.1.0` | 2026-10-30 | `^2.0` | [Browse](https://github.com/flarchive/ernestdefoe-syllabus/tree/archive/v1.1.0) |
-| `1.1.1` | 2026-11-16 | `^2.0` | [Browse](https://github.com/flarchive/ernestdefoe-syllabus/tree/archive/v1.1.1) |
-| `1.1.2` | 2026-11-17 | `^2.0` | [Browse](https://github.com/flarchive/ernestdefoe-syllabus/tree/archive/v1.1.2) |
-| `1.2.0` | 2026-11-18 | `^2.0` | [Browse](https://github.com/flarchive/ernestdefoe-syllabus/tree/archive/v1.2.0) |
-| `1.2.1` | 2026-11-18 | `^2.0` | [Browse](https://github.com/flarchive/ernestdefoe-syllabus/tree/archive/v1.2.1) |
-| `1.3.0` | 2026-11-19 | `^2.0` | [Browse](https://github.com/flarchive/ernestdefoe-syllabus/tree/archive/v1.3.0) |
-| `1.3.1` | 2026-11-19 | `^2.0` | [Browse](https://github.com/flarchive/ernestdefoe-syllabus/tree/archive/v1.3.1) |
-| `1.4.0` | 2026-11-23 | `^2.0` | [Browse](https://github.com/flarchive/ernestdefoe-syllabus/tree/archive/v1.4.0) |
+| — | — | — | — |
 
 Catalog entry: [packages/ernestdefoe-syllabus.json](https://github.com/flarchive/archive-index/blob/main/packages/ernestdefoe-syllabus.json)
 
